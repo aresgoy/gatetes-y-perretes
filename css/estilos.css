@@ -54,7 +54,8 @@ li {
 }
 
 h1,
-h2,
+h2
+,
 .title {
   font-family: 'Poppins', sans-serif;
 }
@@ -228,4 +229,72 @@ footer .legal-links li {
   display: block;
   width: 100%;
   font-size: 1rem;
+}
+
+/* Pagina sobre Petinder*/
+
+.page-about .img-fluid {
+  padding: 10px;
+  background: white;
+  border:  1px solid var(--secondary-light-color);
+}
+
+.page-about figure {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 30px;
+  max-width: 700px;
+  font-style: italic;
+}
+
+/* Pagina camisetas(tabla)*/
+
+.page-tshirt main {
+  min-height: calc(100vh - 205px);
+}
+
+.table {
+  width: 100%;
+  margin: 30px;
+  border-collapse: collapse;
+}
+
+.table, .table th, .table td {
+  border: 1px solid black;
+
+}
+
+.table th {
+  background: var(--secondary-light-color);
+  padding: 5px 10px; 
+}
+
+.table thead th {
+  text-align: center;  
+}
+
+.table tbody th {
+  text-align: left; 
+}
+
+.table thead th:first-child {
+  background-color: var(--secondary-color);
+}
+
+.table td {
+  background-color: white;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.table tr:nth-child(odd) td {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.table caption {
+  background: var(--primary-color);
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
