@@ -83,7 +83,7 @@ tengan las anchura minima indicada por el punto de ruptura, breakpoint */
 }
 
 @media (min-width: 992px) {
-  .comtainer {
+  .container {
     max-width: 960px;
   }
 }
@@ -277,7 +277,7 @@ footer .legal-links li {
   text-align: left;
 }
 
-.table thead th:first-child {
+.table th:first-child {
   background-color: var(--secondary-color);
 }
 
@@ -297,4 +297,124 @@ footer .legal-links li {
   padding: 10px;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+/* Pagina hazte socio (formulario) */
+
+.page-join main form {
+  padding-top: 20px;
+  max-width: 700px;
+}
+
+.page-join main form fieldset {
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  background: white;
+  border: 1px solid var(--primary-color);
+}
+
+.page-join main form fieldset input:focus {
+  outline: none;
+  border-color: rgb(24, 175, 206);
+  border-width: 3px;
+}
+
+.page-join main form fieldset legend {
+  background-color: var(--primary-color);
+  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.page-join main form fieldset label {
+  display: block;
+  position: relative;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.page-join main form fieldset label.required::after {
+  content: "*";
+  color: red;
+  margin-left: 4px;
+}
+
+.page-join main form fieldset input {
+  display: block;
+  height: 40px;
+  width: 100%;
+  border: 1px solid #cecbcb;
+  padding-left: 10px;
+}
+
+::placeholder {
+  font-size: 16px;
+}
+
+.date-control {
+  background: #fff url(../images/calendar.svg) center right no-repeat;
+  background-size: 20px;
+}
+
+.custom-dropdown {
+  position: relative;
+}
+
+.custom-dropdown select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cecbcb;
+}
+
+/* metodo de pago inicio */
+
+h3 {
+  padding-top: 15px;
+}
+
+.opciones-pago {
+  all: initial;
+  background-color: red;
+  display: inline-flex;
+  width: 100%;
+}
+
+.opciones-pago input[type="radio"] {
+  transform: scale(0.3);
+}
+
+/*metodo de pago fin*/
+
+.camiseta-info {
+  margin-top: 10px;
+}
+
+.compra-camiseta {
+  position: relative;
+}
+
+.compra-camiseta select {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #cecbcb;
+}
+
+#camposObligatorios {
+  color: red;
+}
+
+#enviar {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 18px;
+  padding: 8px;
+  margin-top: 10px;
+  border: none;
 }
