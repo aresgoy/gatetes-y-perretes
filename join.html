@@ -1,45 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA_Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Petinder es una organizacion que fomenta la adopcion de perros y gatos"
-    />
-    <link rel="stylesheet" href="css/estilos.css" />
-    <title>Hazte socio</title>
-  </head>
 
-  <body class="page-join">
-    <header>
-      <nav class="container">
-        <a class="link-logo" href="index.html">
-          <img class="logo" src="images/logo.svg" alt="Logo de Petinder" />
-        </a>
-        <ul class="menu-links">
-          <li><a href="about.html">Sobre Petinder</a></li>
-          <li><a href="tshirt.html">Camiseta</a></li>
-          <li><a href="">Hazte socio</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA_Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Petinder es una organizacion que fomenta la adopcion de perros y gatos" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <title>Hazte socio</title>
+</head>
 
-    <main>
-      <div class="container"></div>
-    </main>
+<body class="page-join">
+  <header>
+    <nav class="container">
+      <a class="link-logo" href="index.html">
+        <img class="logo" src="images/logo.svg" alt="Logo de Petinder" />
+      </a>
+      <ul class="menu-links">
+        <li><a href="about.html">Sobre Petinder</a></li>
+        <li><a href="tshirt.html">Camiseta</a></li>
+        <li><a href="">Hazte socio</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <footer>
-      <div class="container">
-        <span> 2021 © Petinder - Sara Ares Goycolea</span>
-        <ul class="legal-links">
-          <li><a href="">Términos y condiciones</a></li>
-          <li><a href="">Política y privacidad</a></li>
-          <li><a href="">Cookies</a></li>
-          <li><a href="">FAQ</a></li>
-        </ul>
-      </div>
-    </footer>
-  </body>
+  <main>
+    <div class="container">
+      <h1 class="title">Hazte socio</h1>
+      <p>
+        Colabora con Petinder haciéndote socio por 15 euros mensuales. Con muy
+        poco puedes ayudar mucho a nuestros amigos peludos. Además puedes
+        comprar nuestra exclusiva camiseta por solo 10 euros que se añadirán
+        al primer pago. Rellena el siguiente formulario para unirte a
+        nosotros:
+      </p>
+
+      <form>
+        <fieldset>
+          <legend>Datos personales</legend>
+          <label for="name" class="required">Nombre</label>
+          <input id="name" type="text" name="name" placeholder="Nombre" required />
+          <label for="apellidos" class="required">Apellidos</label>
+          <input id="apellidos" type="text" name="apellidos" placeholder="Apellidos" required />
+          <label for="mail" class="required">Correo electrónico</label>
+          <input id="mail" type="text" name="mail" placeholder="Correo electrónico" required />
+          <label for="dni" class="required">DNI</label>
+          <input id="dni" type="text" name="dni" placeholder="DNI" required />
+          <label for="fecha">Fecha de nacimiento</label>
+          <input id="fecha" type="text" name="fecha" placeholder="dd/mm/aaaa" class="date-control"
+            pattern="\d{2}/\d{2}/\d{4}" title="Formato válido: dd/mm/aaaa" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Dirección</legend>
+          <label for="calle" class="required">Calle y número</label>
+          <input id="calle" type="text" name="calle" placeholder="Calle y número" required />
+          <label for="ciudad" class="required">Ciudad</label>
+          <input id="ciudad" type="text" name="ciudad" placeholder="Ciudad" required />
+          <label for="provincia" class="required">Provincia</label>
+          <input id="provincia" type="text" name="provincia" placeholder="Provincia" required />
+          <label for="cod_postal" class="required">Código Postal</label>
+          <input id="cod_postal" type="text" name="cod_postal" placeholder="Código postal" required />
+          <label for="pais">País</label>
+          <div class="custom-dropdown">
+            <select id="pais" name="pais">
+              <option value="" disabled selected>✓ Seleccionar</option>
+              <option value="opcion1">Andorra</option>
+              <option value="opcion2">España</option>
+              <option value="opcion3">Francia</option>
+              <option value="opcion4">Otro</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- metodos de pago-->
+
+        <fieldset>
+          <legend>Datos de pago y camiseta</legend>
+          <h3>Método de pago</h3>
+          <div class="opciones-pago">
+
+            <input id="transfer" type="radio" name="pago" value="transferencia">
+            <label for="transfer">Transferencia</label>
+
+            <input id="tarjeta" type="radio" name="pago" value="tarjeta">
+            <label for="tarjeta">Tarjeta de crédito</label>
+
+            <input id="paypal" type="radio" name="pago" value="paypal">
+            <label for="paypal">Paypal</label>
+
+          </div>
+
+          <!-- fin de metodos de pago-->
+
+          <h3>Camiseta</h3>
+          <p>Si quieres que te enviemos la camiseta Petinder por 10€ más,
+            selecciona la talla a continuación:</p>
+          <div class="compra-camiseta">
+            <select id="tallaCamiseta" name="tallaCamiseta">
+              <option value="" disabled selected>✓ No quiero camiseta</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </div>
+        </fieldset>
+      </form>
+
+      <p id="camposObligatorios">* Todos los campos marcados son obligatorios</p>
+      <p><input type="checkbox" name="sescribirse"> He leido y aceptola política de
+        privacidad y las condiciones de uso.</p>
+      <p><input id="enviar" type="submit" value="Enviar"></p>
+
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <span> 2021 © Petinder - Sara Ares Goycolea</span>
+      <ul class="legal-links">
+        <li><a href="">Términos y condiciones</a></li>
+        <li><a href="">Política y privacidad</a></li>
+        <li><a href="">Cookies</a></li>
+        <li><a href="">FAQ</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
 </html>
