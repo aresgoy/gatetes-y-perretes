@@ -39,7 +39,11 @@ a {
 }
 
 a:hover {
-  color: var(--secondary-color);
+  color: var(--secondary-color)
+}
+
+.menu-links li a:hover {
+  color: var(--primary-color);
 }
 
 p {
@@ -130,9 +134,8 @@ header .menu-links a {
   color: black;
 }
 
-/* Revisar */
 header .menu-links li.active a {
-  font-weight: 700;
+  font-weight: 900;
 }
 
 main {
@@ -154,7 +157,7 @@ footer {
   padding: 20px 0;
   margin-top: auto;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 400;
   height: 90px;
 }
 
@@ -181,11 +184,9 @@ footer .legal-links li {
 }
 
 .page-home {
-  background: linear-gradient(
-    75deg,
-    var(--secondary-light-color) 0%,
-    var(--secondary-color)
-  );
+  background: linear-gradient(75deg,
+      var(--secondary-light-color) 0%,
+      var(--secondary-color));
 }
 
 .page-home main {
@@ -230,6 +231,10 @@ footer .legal-links li {
   font-size: 1rem;
 }
 
+.featured-text {
+  font-weight: 500;
+}
+
 /* Pagina sobre Petinder*/
 
 .page-about .img-fluid {
@@ -254,7 +259,7 @@ footer .legal-links li {
 
 .table {
   width: 100%;
-  margin: 30px;
+  margin-top: 30px;
   border-collapse: collapse;
 }
 
@@ -277,7 +282,7 @@ footer .legal-links li {
   text-align: left;
 }
 
-.table th:first-child {
+.table thead th:first-child {
   background-color: var(--secondary-color);
 }
 
@@ -301,50 +306,50 @@ footer .legal-links li {
 
 /* Pagina hazte socio (formulario) */
 
-.page-join main form {
+.page-registro main form {
   padding-top: 20px;
   max-width: 700px;
 }
 
-.page-join main form fieldset {
+.page-registro main form fieldset {
   margin-bottom: 20px;
-  padding-top: 5px;
+  padding-top: 10px;
   padding-left: 40px;
   padding-right: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   background: white;
   border: 1px solid var(--primary-color);
 }
 
-.page-join main form fieldset input:focus {
+.page-registro main form fieldset input:focus {
   outline: none;
-  border-color: rgb(24, 175, 206);
+  border-color: rgb(0, 187, 255);
   border-width: 3px;
 }
 
-.page-join main form fieldset legend {
+.page-registro main form fieldset legend {
   background-color: var(--primary-color);
   color: white;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 3px;
   padding-bottom: 3px;
 }
 
-.page-join main form fieldset label {
+.page-registro main form fieldset label {
   display: block;
   position: relative;
   font-weight: bold;
   padding-top: 10px;
 }
 
-.page-join main form fieldset label.required::after {
+.page-registro main form fieldset label.required::after {
   content: "*";
   color: red;
   margin-left: 4px;
 }
 
-.page-join main form fieldset input {
+.page-registro main form fieldset input {
   display: block;
   height: 40px;
   width: 100%;
@@ -357,64 +362,110 @@ footer .legal-links li {
 }
 
 .date-control {
-  background: #fff url(../images/calendar.svg) center right no-repeat;
+  background: url(../images/calendar.svg) no-repeat;
   background-size: 20px;
+  background-position: calc(100% - 10px) center;
 }
 
-.custom-dropdown {
+.pais-dropdown {
   position: relative;
 }
 
-.custom-dropdown select {
+/* Estilos para el menú desplegable */
+.pais-dropdown select {
   display: block;
   width: 100%;
   padding: 10px;
   border: 1px solid #cecbcb;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+  background-color: white;
+  font-size: 16px;
 }
 
-/* metodo de pago inicio */
+.pais-dropdown select option:not(:checked) {
+  background-color: #DBDBDB;
+}
+
+.pais-dropdown select:focus {
+  outline: none;
+  border-color: rgb(0, 187, 255);
+  border-width: 3px;
+}
+
+/* metodo de pago */
 
 h3 {
   padding-top: 15px;
 }
 
 .opciones-pago {
-  all: initial;
-  background-color: red;
-  display: inline-flex;
-  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.opciones-pago label {
+  margin-right: 10px;
+  padding-bottom: 5px;
+  padding-right: 10px;
 }
 
 .opciones-pago input[type="radio"] {
-  transform: scale(0.3);
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
 }
 
-/*metodo de pago fin*/
-
-.camiseta-info {
-  margin-top: 10px;
+.talla-camiseta {
+  font-weight: bold;
 }
 
-.compra-camiseta {
+.camiseta-dropdown {
   position: relative;
 }
 
-.compra-camiseta select {
+.camiseta-dropdown select {
   display: block;
   width: 50%;
   padding: 10px;
   border: 1px solid #cecbcb;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+  background-color: white;
+  font-size: 16px;
+  border-radius: 0%;
 }
 
-#camposObligatorios {
+.camiseta-dropdown select option:not(:checked) {
+  background-color: #DBDBDB;
+}
+
+.camiseta-dropdown select optgroup {
+  background-color: #DBDBDB;
+}
+
+.camiseta-dropdown select:focus {
+  outline: none;
+  border-color: rgb(0, 187, 255);
+  border-width: 3px;
+}
+
+.camposObligatorios {
   color: red;
 }
 
-#enviar {
+button {
   background-color: var(--primary-color);
   color: white;
-  font-size: 18px;
-  padding: 8px;
+  font-size: 16px;
+  padding: 15px;
   margin-top: 10px;
   border: none;
+  border-radius: 8px;
+}
+
+button:active {
+  background-color: white;
+  color: var(--primary-color); 
+  border: 1px solid var(--primary-color);
 }
